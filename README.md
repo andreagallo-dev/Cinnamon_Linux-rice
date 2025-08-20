@@ -61,51 +61,48 @@ source ~/.bashrc
 echo "Configurations restored successfully!"
 ```
 
-## Step 4:  Spicetify Setup (Themed Spotify)
+### Step 4:  Spicetify Setup (Themed Spotify)
 
-### 1. Install Spicetify
-# First, run the official installation script. Answer 'Y' (yes) when asked to install the Marketplace.
+# 1. Install Spicetify
+ First, run the official installation script. Answer 'Y' (yes) when asked to install the Marketplace.
 
- curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
-
-
-### 2. Restore Spicetify Configuration
-# This command copies all your themes, extensions, and settings from this repository
-# to the correct system location.
-# IMPORTANT: Run this command from inside the cloned dotfiles repository folder.
-
- cp -r config/spicetify ~/.config/
+ `curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh`
 
 
-### 3. Apply the Theme to Spotify
-# This is the full, safe procedure to patch the Spotify client while handling file permissions correctly.
-# You MUST run this entire 4-step process again every time the Spotify client updates itself.
+# 2. Restore Spicetify Configuration
+ This command copies all your themes, extensions, and settings from this repository
+ to the correct system location.
+ IMPORTANT: Run this command from inside the cloned dotfiles repository folder.
+
+ `cp -r config/spicetify ~/.config/`
 
 
-# 1: Temporarily take ownership of the folder.
-# IMPORTANT: Replace 'your_username' with your actual username on the new machine!
-
- sudo chown -R your_username:your_username /usr/share/spotify
-
-
-# 2: Apply the changes as your normal user.
-# NOTE: The very first time you run this on a new machine, use "spicetify backup apply".
-# For all subsequent updates, "spicetify apply" is sufficient.
-
- spicetify apply
+# 3. Apply the Theme to Spotify
+ This is the full, safe procedure to patch the Spotify client while handling file permissions correctly.
+ You MUST run this entire 4-step process again every time the Spotify client updates itself.
 
 
-# 3: Return ownership to root for security.
+1. Temporarily take ownership of the folder.
+**IMPORTANT: Replace 'your_username' with your actual username on the new machine!**
 
- sudo chown -R root:root /usr/share/spotify
-
-
-# 4: Add read permissions for all users (this prevents the black screen issue).
-
- sudo chmod -R a+rX /usr/share/spotify
+ `sudo chown -R your_username:your_username /usr/share/spotify`
 
 
+2. Apply the changes as your normal user.
+**NOTE: The very first time you run this on a new machine, use "spicetify backup apply".**
+For all subsequent updates, "spicetify apply" is sufficient.
 
+ `spicetify apply`
+
+
+3. Return ownership to root for security.
+
+ `sudo chown -R root:root /usr/share/spotify`
+
+
+4. Add read permissions for all users (this prevents the black screen issue).
+
+ `sudo chmod -R a+rX /usr/share/spotify`
 
 
 ### Step 5: Final Steps (requiring `sudo` or user interaction)
