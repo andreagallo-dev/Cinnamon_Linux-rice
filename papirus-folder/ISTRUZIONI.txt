@@ -1,0 +1,40 @@
+#################################################################
+#  ISTRUZIONI PER CAMBIARE COLORE ALLE CARTELLE (Papirus + Catppuccin)
+#################################################################
+
+
+PASSO 1: VEDERE I COLORI DISPONIBILI
+------------------------------------
+Per vedere la lista di tutti i colori Catppuccin che hai installato,
+usa questo comando nel terminale:
+
+papirus-folders -l | grep cat
+
+
+PASSO 2: APPLICARE UN NUOVO COLORE
+----------------------------------
+Una volta scelto un nome dalla lista (es. "cat-mocha-mauve"),
+usa il comando seguente, sostituendo NOME_COLORE.
+
+Comando base:
+papirus-folders -C NOME_COLORE --theme Papirus-Dark
+
+Esempio pratico (per il colore malva):
+papirus-folders -C cat-mocha-mauve --theme Papirus-Dark
+
+Esempio pratico (per il colore rosa):
+papirus-folders -C cat-mocha-rosewater --theme Papirus-Dark
+
+
+PASSO 3: TORNARE AL COLORE DI DEFAULT
+-------------------------------------
+Se vuoi ripristinare il colore blu standard di Papirus, usa questo comando:
+
+papirus-folders -C default --theme Papirus-Dark
+
+
+NOTE IMPORTANTI:
+----------------
+- Puoi eseguire questi comandi da qualsiasi posizione nel terminale.
+- Stai modificando il tema 'Papirus-Dark'. Se un giorno dovessi usare
+  'Papirus-Light' o un'altra variante, dovrai cambiarlo nel comando.

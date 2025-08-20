@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=btop
+Comment=System Monitor
+Exec=kitty -e btop
+Icon=utilities-system-monitor
+Terminal=false
+Type=Application
+Categories=System;
