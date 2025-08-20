@@ -1,4 +1,5 @@
 # My Catppuccin Rice for Linux Mint Cinnamon
+![Il mio Desktop Catppuccin](./assets/Ricing.png)
 
 This repository contains all my configuration files ("dotfiles") to customize a fresh Linux Mint Cinnamon installation with the Catppuccin theme.
 
