@@ -63,13 +63,13 @@ echo "Configurations restored successfully!"
 
 ### Step 4:  Spicetify Setup (Themed Spotify)
 
-# 1. Install Spicetify
+#### 1. Install Spicetify
  First, run the official installation script. Answer 'Y' (yes) when asked to install the Marketplace.
 
  `curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh`
 
 
-# 2. Restore Spicetify Configuration
+#### 2. Restore Spicetify Configuration
  This command copies all your themes, extensions, and settings from this repository
  to the correct system location.
  IMPORTANT: Run this command from inside the cloned dotfiles repository folder.
@@ -77,7 +77,7 @@ echo "Configurations restored successfully!"
  `cp -r config/spicetify ~/.config/`
 
 
-# 3. Apply the Theme to Spotify
+#### 3. Apply the Theme to Spotify
  This is the full, safe procedure to patch the Spotify client while handling file permissions correctly.
  You MUST run this entire 4-step process again every time the Spotify client updates itself.
 
